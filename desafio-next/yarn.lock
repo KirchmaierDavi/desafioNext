@@ -999,6 +999,11 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.3.0.tgz#ea89004119dc42db2e1dba0f97d553f7372f6fcb"
   integrity sha512-AHPmaAx+RYfZz0eYu6Gviiagpmiyw98ySSlQvCUhVGDRtDFe4DBS0x1bSjdF3gqUDYOczB+yYvBTtEylYSdRhg==
 
+"@fontsource/wallpoet@^4.5.7":
+  version "4.5.7"
+  resolved "https://registry.yarnpkg.com/@fontsource/wallpoet/-/wallpoet-4.5.7.tgz#bae6e025785be8c3df2dc16e73202e3fa647787e"
+  integrity sha512-9trLmaHrqYbLmEZqjXdZ1aBW6SWxtWnqp2iQMK/HH0OHU5CVhOiOgq+ssmgmspAM/fmbM4O3Ale0UbOdrLeGLA==
+
 "@motionone/animation@^10.15.1":
   version "10.15.1"
   resolved "https://registry.yarnpkg.com/@motionone/animation/-/animation-10.15.1.tgz#4a85596c31cbc5100ae8eb8b34c459fb0ccf6807"

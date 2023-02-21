@@ -1,4 +1,6 @@
-import { HStack, Stack, Text } from "@chakra-ui/react";
+import { HStack, Stack, Text, Button, ButtonGroup } from "@chakra-ui/react";
+import { Texts } from "../Texts/index";
+
 import NextImage from "next/image";
 
 import React from "react";
@@ -22,11 +24,14 @@ export function Navbar() {
           alt={"Blueskins logo"}
         />
       </Stack>
-      <Stack
+      <HStack
        as = "section"
+       spacing={5}
       >
-        
-      </Stack>
+        <Texts text={"quem somos"}></Texts>
+        <Texts text={"itens"}></Texts>
+        <Button colorScheme={"blue"} variant={"solid"} textTransform={"uppercase"} fontFamily={"wallpoet"} fontWeight={"400"} fontSize={"24px"}>Login</Button>
+      </HStack>
     </HStack>
   );
 }

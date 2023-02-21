@@ -3,6 +3,9 @@ import { ChakraProvider } from '@chakra-ui/react';
 
 import { theme } from '../styles/theme';
 import { Navbar } from '../components/navbar';
+
+import'@fontsource/wallpoet/400.css';
+
 import '../styles/globals.css'
 import React from 'react';
 

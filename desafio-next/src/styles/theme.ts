@@ -6,6 +6,10 @@ export const theme = extendTheme({
             body:{
                 bg: '#051923',
                 color:'white',
+                fonts: {
+                    heading:`'wallpoet', sans-serif`,
+                    body:`'wallpoet', sans-serif`
+                }
             }
         }
     }
