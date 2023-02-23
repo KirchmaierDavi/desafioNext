@@ -3,6 +3,7 @@ import { ChakraProvider } from '@chakra-ui/react';
 
 import { theme } from '../styles/theme';
 import { Navbar } from '../components/navbar';
+import { Footer } from '../components/footer';
 
 import'@fontsource/wallpoet/400.css';
 
@@ -14,6 +15,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <ChakraProvider resetCSS theme={theme}>
     <Navbar />
      <Component {...pageProps} />
+    <Footer />
     </ChakraProvider>
   )
 }

@@ -12,7 +12,7 @@ export function Texts({text}: TextsProps){
             fontSize={"24px"}
             fontFamily={"wallpoet"}
         >
-            {text}
+            <a href="#">{text}</a>
         </Text>
     )
 }

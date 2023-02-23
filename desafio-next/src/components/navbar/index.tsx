@@ -24,13 +24,19 @@ export function Navbar() {
           alt={"Blueskins logo"}
         />
       </Stack>
-      <HStack
-       as = "section"
-       spacing={5}
-      >
+      <HStack as="section" spacing={5}>
         <Texts text={"quem somos"}></Texts>
         <Texts text={"itens"}></Texts>
-        <Button colorScheme={"blue"} variant={"solid"} textTransform={"uppercase"} fontFamily={"wallpoet"} fontWeight={"400"} fontSize={"24px"}>Login</Button>
+        <Button
+          colorScheme={"blue"}
+          variant={"solid"}
+          textTransform={"uppercase"}
+          fontFamily={"wallpoet"}
+          fontWeight={"400"}
+          fontSize={"24px"}
+        >
+          Login
+        </Button>
       </HStack>
     </HStack>
   );
