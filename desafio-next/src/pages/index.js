@@ -12,7 +12,7 @@ export default function Home() {
       as= "main"
     >
       <Stack 
-       h={"100vh"}
+       h={"150vh"}
       >
 
       </Stack>
