@@ -1,8 +1,6 @@
 import { HStack, Stack, Text, Button, ButtonGroup } from "@chakra-ui/react";
 import { Texts } from "../Texts/index";
-
 import NextImage from "next/image";
-
 import React from "react";
 
 export function Navbar() {
@@ -10,13 +8,13 @@ export function Navbar() {
     <HStack
       as="nav"
       justify={"space-between"}
-      py={10}
-      px={5}
+      py={{base: 5, md: 10}}
+      px={{base: 3, md: 5}}
       w={"100%"}
-      h={"110px"}
+      h={{base: "auto", md: "110px"}}
       bg={"#003554"}
     >
-      <Stack as="section">
+      <Stack as="section" alignSelf={"center"}>
         <NextImage
           width={64}
           height={64}
@@ -24,7 +22,7 @@ export function Navbar() {
           alt={"Blueskins logo"}
         />
       </Stack>
-      <HStack as="section" spacing={5}>
+      <HStack as="section" spacing={5} display={{base: "none", md: "flex"}}>
         <Texts text={"quem somos"}></Texts>
         <Texts text={"itens"}></Texts>
         <Button
@@ -38,6 +36,17 @@ export function Navbar() {
           Login
         </Button>
       </HStack>
+      <Button
+        colorScheme={"blue"}
+        variant={"solid"}
+        textTransform={"uppercase"}
+        fontFamily={"wallpoet"}
+        fontWeight={"400"}
+        fontSize={"24px"}
+        display={{base: "flex", md: "none"}}
+      >
+        Login
+      </Button>
     </HStack>
   );
 }
