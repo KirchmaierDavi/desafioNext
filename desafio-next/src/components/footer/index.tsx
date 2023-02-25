@@ -9,7 +9,7 @@ import React from "react";
 export function Footer() {
   return (
     <Flex as="footer" py={7} px={11} h={{base: "fit-content", md: "fit-content", lg: "fit-content" ,xl: "fit-content" , '2xl': "156px"}} bg={"#003554"} flexDirection={{base: "row", md: "row", lg: "row", xl: "row" ,'2xl': "column"}} justify={{base: "center", md: "center"}} flexWrap={"wrap"}>
-      <Stack as="section" justify={{base: "center", md:"unset"}}>
+      <Stack as="section" justify={"center"}>
         <NextImage
           width={92}
           height={92}
@@ -32,11 +32,11 @@ export function Footer() {
           <Text as="p" align={"center"} justifyContent={"center"} fontSize={"14px"} fontFamily={"Wallpoet"}>
             SITE DESENVOLVIDO PARA ESTUDO DA TECNOLOGIA NEXT, 
             DURANTE O DESAFIO DA GESTÃO 2023.1 DA CODE JR, PARA MAIS INFORMAÇÕES E CONTATO DO DESENVOLVEDOR,
-            <Stack as={"section"} spacing={0}>
-              <a href="#"><Text as="span" color="#00A6FB">CLIQUE AQUI!</Text></a>
-              <Text as="span" color="#00A6FB">SANTOS FUTEBOL CLUBE!</Text>
-            </Stack>
-          </Text>
+            </Text>
+          <Stack as={"section"} spacing={0}>
+            <a href="#" align={"center"} justifyContent={"center"}><Text as="span" color="#00A6FB"  fontSize={"14px"} fontFamily={"Wallpoet"}>CLIQUE AQUI!</Text></a>
+            <Text as="span" color="#00A6FB" align={"center"} justifyContent={"center"} fontSize={"14px"} fontFamily={"Wallpoet"}>SANTOS FUTEBOL CLUBE!</Text>
+          </Stack>
         </Box>
       </Stack>
     </Flex>
