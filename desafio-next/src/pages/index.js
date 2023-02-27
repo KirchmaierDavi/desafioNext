@@ -1,4 +1,8 @@
 import Logo from 'public/blueskins-high-resolution-logo-white-on-transparent-background.png'
+import item1 from 'public/01.png'
+import item2 from 'public/02.png'
+import item3 from 'public/03_duality.png'
+
 import NextImage from 'next/image'
 
 import { Inter } from '@next/font/google'
@@ -44,8 +48,10 @@ export default function Home() {
             </Text>
             <Text as={"span"} color={"#00A6FB"} fontFamily={"Wallpoet"} fontSize={{ base: 12, md: 20, lg: 24, xl: 28, '2xl': 32 }} textAlign={"center"}>PRINCIPAIS DA SEMANA!</Text>
           </Stack>
-          <HStack as={"div"} spacing={56}>
-
+          <HStack as={"div"} spacing={{ base: 8, md: 16, lg: 32, xl: 40, '2xl': 56 }} bg={"#006494"} py={{ base: "8px", md: "16px", lg: "24px", '2xl': "40px" }} px={{ base: "8px", md: "20px", lg: "32px", '2xl': "52px" }} borderRadius={15}>
+            <NextImage as="img" src={item1} sizes={"(max-width: 1440px) 40vw, (max-width: 820px) 20vw, (max-width: 414px) 10vw, (max-width: 280px) 5vw"} />
+            <NextImage as="img" src={item2} sizes={"(max-width: 1440px) 40vw, (max-width: 820px) 20vw, (max-width: 414px) 10vw, (max-width: 280px) 5vw"} />
+            <NextImage as="img" src={item3} sizes={"(max-width: 1440px) 40vw, (max-width: 820px) 20vw, (max-width: 414px) 10vw, (max-width: 280px) 5vw"} />
           </HStack>
         </Box>
       </Stack>
