@@ -28,11 +28,11 @@ export function Footer() {
         </HStack>
       </Stack>
       <Stack as="section" flexWrap={"wrap"}>
-        <Box h={{base: "auto",md: 92}} w ={{base: "fit-content", md: "fit-content", lg: "fit-content", xl:"1026px"}} bg={"#051923"} borderRadius={"5px"}>
+        <Box h={{base: "auto",md: 92}} w ={{base: "fit-content", md: "fit-content", lg: "fit-content", xl:"940px"}} bg={"#051923"} borderRadius={"5px"}>
           <Text as="p" align={"center"} justifyContent={"center"} fontSize={"14px"} fontFamily={"Wallpoet"}>
             SITE DESENVOLVIDO PARA ESTUDO DA TECNOLOGIA NEXT, 
             DURANTE O DESAFIO DA GESTÃO 2023.1 DA CODE JR, PARA MAIS INFORMAÇÕES E CONTATO DO DESENVOLVEDOR,
-            </Text>
+          </Text>
           <Stack as={"section"} spacing={0}>
             <a href="#" align={"center"} justifyContent={"center"}><Text as="span" color="#00A6FB"  fontSize={"14px"} fontFamily={"Wallpoet"}>CLIQUE AQUI!</Text></a>
             <Text as="span" color="#00A6FB" align={"center"} justifyContent={"center"} fontSize={"14px"} fontFamily={"Wallpoet"}>SANTOS FUTEBOL CLUBE!</Text>
