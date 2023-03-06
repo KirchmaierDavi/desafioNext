@@ -1,6 +1,11 @@
 import { HStack, Stack, Text, Button, ButtonGroup } from "@chakra-ui/react";
 import { Texts } from "../Texts/index";
+import { Link } from '@chakra-ui/react'
+
 import NextImage from "next/image";
+import NextLink from 'next/link'
+
+
 import React from "react";
 
 export function Navbar() {
