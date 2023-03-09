@@ -2,7 +2,6 @@ import NextImage from 'next/image'
 
 import { Inter } from '@next/font/google'
 import { HStack, Stack, Box, Image, Text, Input, Button } from '@chakra-ui/react'
-import { Footer } from '../components/footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -13,8 +12,8 @@ export default function Home() {
           <Box>
             <NextImage src={'/../public/blueskins-low-resolution-logo-white-on-transparent-background.png'} alt={'Logo do Blueskins'} width={240} height={160} />
           </Box>
-          <Input placeholder='Usuario' textAlign={"center"} fontFamily={"wallpoet"} textTransform={"uppercase"} fontSize={{base: "12px",md: "24px"}} variant={"outline"} bg={"#051923"} border={"none"}/>
-          <Input type={"password"} placeholder='senha' textAlign={"center"} fontFamily={"wallpoet"} textTransform={"uppercase"} fontSize={{base: "12px",md: "24px"}}variant={"outline"} bg={"#051923"} border={"none"}/>
+          <Input placeholder='Usuario' size={"lg"} textAlign={"center"} fontFamily={"wallpoet"} textTransform={"uppercase"} fontSize={{base: "12px",md: "24px"}} variant={"outline"} bg={"#051923"} border={"none"}/>
+          <Input type={"password"} size={"lg"} placeholder='senha' textAlign={"center"} fontFamily={"wallpoet"} textTransform={"uppercase"} fontSize={{base: "12px",md: "24px"}}variant={"outline"} bg={"#051923"} border={"none"}/>
           <Button colorScheme={"blue"} fontFamily={"wallpoet"} textTransform={"uppercase"} fontSize={"24px"} variant={"solid"}>entrar</Button>
         </Stack>
     </Stack>

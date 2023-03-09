@@ -69,7 +69,7 @@ export default function Home() {
         ></Input>
       </HStack>
       <TableContainer width={"97%"} borderBottomRadius={"10px"} bg={"#006494"}>
-        <Table variant={"simple"}>
+        <Table variant={"unstyled"}>
           <Thead bg={"#003554"}>
             <Tr textTransform={"uppercase"} color={"#ffffff"} fontFamily={"wallpoet"}>
               <Th>nome</Th>
@@ -80,7 +80,7 @@ export default function Home() {
             </Tr>
           </Thead>
           <Tbody>
-            <Tr>
+            <Tr border={"3px"} borderColor={"#000000"}>
               <Td>Davi Kirchmaier Paiva</Td>
               <Td>davi.kirchmaier99@gmail.com</Td>
               <Td>salário</Td>
