@@ -33,8 +33,8 @@ export function Footer() {
             SITE DESENVOLVIDO PARA ESTUDO DA TECNOLOGIA NEXT, 
             DURANTE O DESAFIO DA GESTÃO 2023.1 DA CODE JR, PARA MAIS INFORMAÇÕES E CONTATO DO DESENVOLVEDOR,
           </Text>
-          <Stack as={"section"} spacing={0}>
-            <Link href="/desenvolvedor"><a href="#" align={"center"} justifyContent={"center"}><Text as="span" color="#00A6FB"  fontSize={"14px"} fontFamily={"Wallpoet"}>CLIQUE AQUI!</Text></a></Link>
+          <Stack as={"section"} align={"center"} spacing={0}>
+            <Link href="/desenvolvedor"><Text as="span" textAlign={"center"} color="#00A6FB"  fontSize={"14px"} fontFamily={"Wallpoet"}>CLIQUE AQUI!</Text></Link>
             <Text as="span" color="#00A6FB" align={"center"} justifyContent={"center"} fontSize={"14px"} fontFamily={"Wallpoet"}>SANTOS FUTEBOL CLUBE!</Text>
           </Stack>
         </Box>
