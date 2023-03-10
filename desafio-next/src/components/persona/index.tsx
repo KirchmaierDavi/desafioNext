@@ -13,7 +13,7 @@ interface PessoaProps {
 export function Pessoa({ nome, cargo, email, idade }: PessoaProps) {
   return (
     <Stack
-      width={"220px"}
+      width={"240px"}
       height={"180px"}
       align={"center"}
       spacing={"16px"}
@@ -30,7 +30,7 @@ export function Pessoa({ nome, cargo, email, idade }: PessoaProps) {
         {cargo}
       </Text>
       <Text fontSize={"12px"} fontFamily={"wallpoet"}>
-        {idade} anos
+        aniversario: {idade} 
       </Text>
       <Text fontSize={"12px"} fontFamily={"wallpoet"}>
         {email}
