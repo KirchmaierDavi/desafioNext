@@ -17,11 +17,12 @@ import React from "react";
 interface modalViewProps{
   email : string
   nome : string
+  anv : string
   salario : string
   cargo : string
 }
 
-export function ModalVisualizar({email, nome, salario, cargo}: modalViewProps) {
+export function ModalVisualizar({email, nome, salario, cargo, anv}: modalViewProps) {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const initialRef = React.useRef(null);
@@ -54,22 +55,27 @@ export function ModalVisualizar({email, nome, salario, cargo}: modalViewProps) {
           <ModalBody pb={6}>
             <FormControl>
               <FormLabel>Nome</FormLabel>
-              <Input ref={initialRef} value={nome} isReadOnly/>
+              <Input ref={initialRef} bg={"#051923"} value={nome} isReadOnly/>
             </FormControl>
 
             <FormControl mt={4}>
               <FormLabel>Email</FormLabel>
-              <Input type={"email"} value={email} isReadOnly/>
+              <Input type={"email"} bg={"#051923"} value={email} isReadOnly/>
+            </FormControl>
+
+            <FormControl mt={4}>
+              <FormLabel>Aniversário</FormLabel>
+              <Input value={anv} bg={"#051923"} isReadOnly/>
             </FormControl>
 
             <FormControl mt={4}>
               <FormLabel>Salario</FormLabel>
-              <Input type={"number"} value={salario} isReadOnly/>
+              <Input type={"number"} bg={"#051923"} value={salario} isReadOnly/>
             </FormControl>
 
             <FormControl mt={4}>
               <FormLabel>Cargo</FormLabel>
-              <Input value={cargo} isReadOnly/>
+              <Input value={cargo} bg={"#051923"} isReadOnly/>
             </FormControl>
           </ModalBody>
 

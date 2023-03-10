@@ -55,8 +55,10 @@ export default function Home() {
   const finalRef = React.useRef(null);
 
   interface Funcionario {
+    id : number;
     name: string;
     email: string;
+    aniversario: string;
     salario: string;
     cargo: string;
   }
@@ -110,6 +112,7 @@ export default function Home() {
             >
               <Th>nome</Th>
               <Th>email</Th>
+              <Th>aniversário</Th>
               <Th>salário</Th>
               <Th>cargo</Th>
               <Th>Opções</Th>
@@ -122,12 +125,13 @@ export default function Home() {
             <Tr border={"3px"} borderColor={"#000000"}>
               <Td>{funcionarios.name}</Td>
               <Td>{funcionarios.email}</Td>
+              <td>{funcionarios.aniversario}</td>
               <Td>{funcionarios.salario}</Td>
               <Td>{funcionarios.cargo}</Td>
               <Td>
                 <HStack spacing={"10px"}>
-                  <ModalEditar email={funcionarios.email} nome={funcionarios.name} salario={funcionarios.salario} cargo={funcionarios.cargo}></ModalEditar>
-                  <ModalVisualizar email={funcionarios.email} nome={funcionarios.name} salario={funcionarios.salario} cargo={funcionarios.cargo}></ModalVisualizar>
+                  <ModalEditar email={funcionarios.email} nome={funcionarios.name} salario={funcionarios.salario} cargo={funcionarios.cargo} aniversario={funcionarios.aniversario} id={funcionarios.id}></ModalEditar>
+                  <ModalVisualizar email={funcionarios.email} nome={funcionarios.name} salario={funcionarios.salario} cargo={funcionarios.cargo} anv={funcionarios.aniversario}></ModalVisualizar>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 448 512"
