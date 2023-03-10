@@ -1,4 +1,4 @@
-import { HStack, Stack, Text, Button, ButtonGroup, Center, Box, Spacer, Image, Flex } from "@chakra-ui/react";
+import { HStack, Stack, Text, Button, ButtonGroup, Center, Box, Spacer, Image, Flex, Link } from "@chakra-ui/react";
 import { Texts } from "../Texts/index";
 
 import NextImage from "next/image";
@@ -34,7 +34,7 @@ export function Footer() {
             DURANTE O DESAFIO DA GESTÃO 2023.1 DA CODE JR, PARA MAIS INFORMAÇÕES E CONTATO DO DESENVOLVEDOR,
           </Text>
           <Stack as={"section"} spacing={0}>
-            <a href="#" align={"center"} justifyContent={"center"}><Text as="span" color="#00A6FB"  fontSize={"14px"} fontFamily={"Wallpoet"}>CLIQUE AQUI!</Text></a>
+            <Link href="/desenvolvedor"><a href="#" align={"center"} justifyContent={"center"}><Text as="span" color="#00A6FB"  fontSize={"14px"} fontFamily={"Wallpoet"}>CLIQUE AQUI!</Text></a></Link>
             <Text as="span" color="#00A6FB" align={"center"} justifyContent={"center"} fontSize={"14px"} fontFamily={"Wallpoet"}>SANTOS FUTEBOL CLUBE!</Text>
           </Stack>
         </Box>
