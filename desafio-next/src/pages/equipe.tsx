@@ -35,7 +35,7 @@ export default function Home() {
       >
         conheça nossa equipe:
       </Text>
-      <Grid templateColumns={{base: "repeat(1, 1fr)",md: "repeat(2, 1fr)" ,lg: "repeat(3, 1fr)", xl: "repeat(5, 1fr)"}} gap={6}>
+      <Grid templateColumns={{base: "repeat(1, 1fr)",md: "repeat(2, 1fr)" ,lg: "repeat(3, 1fr)", xl: "repeat(5, 1fr)"}} gap={20}>
         <GridItem w="100%"><Pessoa nome={"Davi Kirchmaier Paiva"} img={"/public/foto.jpeg"} idade={"19"} email={"davi.kirchmaier99@gmail.com"} cargo={"assessor"}/></GridItem>
         <GridItem w="100%"><Pessoa nome={"Davi"} img={"/public/foto.jpeg"} idade={"19"} email={"davi.kirchmaier99@gmail.com"} cargo={"assessor"}/></GridItem>
         <GridItem w="100%"><Pessoa nome={"Davi"} img={"/public/foto.jpeg"} idade={"19"} email={"davi.kirchmaier99@gmail.com"} cargo={"assessor"}/></GridItem>
