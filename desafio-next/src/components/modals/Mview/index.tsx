@@ -14,7 +14,14 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 
-export function ModalVisualizar() {
+interface modalViewProps{
+  email : string
+  nome : string
+  salario : string
+  cargo : string
+}
+
+export function ModalVisualizar({email, nome, salario, cargo}: modalViewProps) {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const initialRef = React.useRef(null);
@@ -42,27 +49,27 @@ export function ModalVisualizar() {
       >
         <ModalOverlay />
         <ModalContent fontFamily={"wallpoet"} bg={"#003554"}>
-          <ModalHeader>Adicione um funcionario</ModalHeader>
+          <ModalHeader>Informações do funcionario</ModalHeader>
           <ModalCloseButton />
           <ModalBody pb={6}>
             <FormControl>
               <FormLabel>Nome</FormLabel>
-              <Input ref={initialRef} value="Digite seu nome aqui" isReadOnly/>
+              <Input ref={initialRef} value={nome} isReadOnly/>
             </FormControl>
 
             <FormControl mt={4}>
               <FormLabel>Email</FormLabel>
-              <Input type={"email"} value="Digite seu email aqui" isReadOnly/>
+              <Input type={"email"} value={email} isReadOnly/>
             </FormControl>
 
             <FormControl mt={4}>
               <FormLabel>Salario</FormLabel>
-              <Input type={"number"} value="Digite seu email aqui" isReadOnly/>
+              <Input type={"number"} value={salario} isReadOnly/>
             </FormControl>
 
             <FormControl mt={4}>
               <FormLabel>Cargo</FormLabel>
-              <Input value="Digite seu cargo aqui" isReadOnly/>
+              <Input value={cargo} isReadOnly/>
             </FormControl>
           </ModalBody>
 

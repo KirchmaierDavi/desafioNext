@@ -14,7 +14,14 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 
-export function ModalEditar() {
+interface modalEditarProps{
+  email : string
+  nome : string
+  salario : string
+  cargo : string
+}
+
+export function ModalEditar({email, nome, salario, cargo}: modalEditarProps) {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const initialRef = React.useRef(null);
@@ -47,22 +54,22 @@ export function ModalEditar() {
           <ModalBody pb={6}>
             <FormControl>
               <FormLabel>Nome</FormLabel>
-              <Input ref={initialRef} type={"text"} placeholder={"davi"}/>
+              <Input ref={initialRef} type={"text"} placeholder={nome}/>
             </FormControl>
 
             <FormControl mt={4}>
               <FormLabel>Email</FormLabel>
-              <Input type={"email"} value="Davi.kirchmaier99@gmail.com" />
+              <Input type={"email"} placeholder={email} />
             </FormControl>
 
             <FormControl mt={4}>
               <FormLabel>Salario</FormLabel>
-              <Input type={"number"} value="1500" />
+              <Input type={"number"} placeholder={salario} />
             </FormControl>
 
             <FormControl mt={4}>
               <FormLabel>Cargo</FormLabel>
-              <Input value="Assessor" />
+              <Input placeholder={cargo} />
             </FormControl>
           </ModalBody>
 

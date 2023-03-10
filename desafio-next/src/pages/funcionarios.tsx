@@ -1,4 +1,8 @@
-import NextImage from "next/image";
+import NextImage from "next/image"
+
+import { useEffect, useState } from "react";
+
+import axios from 'axios';
 
 import { ModalAdiciona } from "../components/modals/add/index";
 import { ModalEditar } from "../components/modals/edit";
@@ -39,16 +43,32 @@ import {
   Image,
   Text,
   Input,
-  Button,
+  Button
 } from "@chakra-ui/react";
 
 const inter = Inter({ subsets: ["latin"] });
+
 
 export default function Home() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const initialRef = React.useRef(null);
   const finalRef = React.useRef(null);
 
+  interface Funcionario {
+    name: string;
+    email: string;
+    salario: string;
+    cargo: string;
+  }
+
+  const [data, setData] = useState<Funcionario[]>([]);
+
+  useEffect(() => {
+    axios.get<Funcionario[]>('http://localhost:3000/funcionarios').then((Response) => {
+      setData(Response.data);
+    });
+  }, []);
+  
   return (
     <Stack
       as={"main"}
@@ -96,15 +116,18 @@ export default function Home() {
             </Tr>
           </Thead>
           <Tbody>
+            {data.map(funcionarios=>(
+              
+            
             <Tr border={"3px"} borderColor={"#000000"}>
-              <Td>Davi Kirchmaier Paiva</Td>
-              <Td>davi.kirchmaier99@gmail.com</Td>
-              <Td>salário</Td>
-              <Td>assessor</Td>
+              <Td>{funcionarios.name}</Td>
+              <Td>{funcionarios.email}</Td>
+              <Td>{funcionarios.salario}</Td>
+              <Td>{funcionarios.cargo}</Td>
               <Td>
                 <HStack spacing={"10px"}>
-                  <ModalEditar></ModalEditar>
-                  <ModalVisualizar></ModalVisualizar>
+                  <ModalEditar email={funcionarios.email} nome={funcionarios.name} salario={funcionarios.salario} cargo={funcionarios.cargo}></ModalEditar>
+                  <ModalVisualizar email={funcionarios.email} nome={funcionarios.name} salario={funcionarios.salario} cargo={funcionarios.cargo}></ModalVisualizar>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 448 512"
@@ -117,6 +140,7 @@ export default function Home() {
                 </HStack>
               </Td>
             </Tr>
+            ))}
           </Tbody>
         </Table>
       </TableContainer>
