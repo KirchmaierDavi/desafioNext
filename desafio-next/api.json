@@ -1,14 +1,6 @@
 {
   "funcionarios": [
     {
-      "name": "ana beatriz lana",
-      "email": "davi.fodase@gmail.com",
-      "aniversario": "20/20",
-      "salario": "20",
-      "cargo": "assessor",
-      "id": 1
-    },
-    {
       "id": 2,
       "name": "Arthur Bonaldi",
       "email": "arthur.bonaldi@codejr.com.br",

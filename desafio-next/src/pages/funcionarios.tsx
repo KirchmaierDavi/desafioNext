@@ -7,6 +7,7 @@ import axios from 'axios';
 import { ModalAdiciona } from "../components/modals/add/index";
 import { ModalEditar } from "../components/modals/edit";
 import { ModalVisualizar } from "../components/modals/Mview";
+import { ModalExcluir } from "../components/modals/delete";
 
 import {
   useDisclosure,
@@ -70,21 +71,6 @@ export default function Home() {
       setData(Response.data);
     });
   }, []);
-
-  async function excluirFuncionario(id) {
-    try {
-      const response = await axios.delete(`http://localhost:3000/funcionarios${id}`);
-  
-      console.log(response.data); 
-    } catch (error) {
-      console.error(error);
-    }
-  }
-
-  async function handleExcluirFuncionario(id) {
-    await excluirFuncionario(id);
-
-  }
   
   return (
     <Stack
@@ -147,16 +133,7 @@ export default function Home() {
                 <HStack spacing={"10px"}>
                   <ModalEditar email={funcionarios.email} nome={funcionarios.name} salario={funcionarios.salario} cargo={funcionarios.cargo} aniversario={funcionarios.aniversario} id={funcionarios.id}></ModalEditar>
                   <ModalVisualizar email={funcionarios.email} nome={funcionarios.name} salario={funcionarios.salario} cargo={funcionarios.cargo} anv={funcionarios.aniversario}></ModalVisualizar>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 448 512"
-                    fill="#ffffff"
-                    width={"20px"}
-                    height={"20px"}
-                    onClick={() => handleExcluirFuncionario(funcionarios.id)}
-                  >
-                    <path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z" />
-                  </svg>
+                  <ModalExcluir id={funcionarios.id}></ModalExcluir>
                 </HStack>
               </Td>
             </Tr>
