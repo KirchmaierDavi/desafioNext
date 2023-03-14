@@ -126,7 +126,7 @@ export default function Home() {
             <Tr border={"3px"} borderColor={"#000000"}>
               <Td>{funcionarios.name}</Td>
               <Td>{funcionarios.email}</Td>
-              <td>{funcionarios.aniversario}</td>
+              <Td>{funcionarios.aniversario}</Td>
               <Td>{funcionarios.salario}</Td>
               <Td>{funcionarios.cargo}</Td>
               <Td>
